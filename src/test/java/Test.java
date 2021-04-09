@@ -1,4 +1,5 @@
 import com.tzb.faker4j.Faker;
+import com.tzb.faker4j.params.BankInfo;
 import com.tzb.faker4j.params.RefInt;
 import com.tzb.faker4j.random.Word;
 
@@ -33,6 +34,11 @@ public class Test {
 
         //随机字母
         System.out.println(Word.randomCapitalWord());
+        BankInfo bankInfo = Faker.bank().bankInfo();
+        bankInfo.getBankNo();
+        bankInfo.getBankCode();
+        bankInfo.getBankName();
+        System.out.println(Faker.bank().bankInfo().getBankNo());
 
     }
 }
