@@ -1,5 +1,11 @@
 # Compiled class file
 *.class
+/target/
+/.settings/
+.project
+.classpath
+/bin/
+/logs/
 
 # Log file
 *.log
