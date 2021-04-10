@@ -39,14 +39,7 @@ public class Test {
         bankInfo.getBankCode();
         bankInfo.getBankName();
         System.out.println(Faker.bank().bankInfo().getBankNo());
-        long start = System.currentTimeMillis();
-        for (int i = 0; i < 10000; i++) {
-            Faker.bank().bankInfo();
-
-        }
-
-        long end = System.currentTimeMillis();
-        System.out.println(end-start);
+        System.out.println(Faker.word().randomWord());
 
     }
 }

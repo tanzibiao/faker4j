@@ -38,7 +38,7 @@ public class Faker {
         return new File();
     }
 
-    public static Word randomWord() {
+    public static Word word() {
         return new Word();
     }
 
