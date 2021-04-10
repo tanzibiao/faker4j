@@ -51,6 +51,8 @@ public class Bank {
         String bin = bankBin[index];
         String bankName = Bank.bankName[index];
 
+        //Luhn算法
+        //卡号从右往左，偶数位乘以2，结果按按位相加（6*2=12，按位相加：1+2），所有数字和奇数位求和，结果能被10整除。
         //根据校验规则倒推
         /*
         1、从卡号最后一位数字开始，逆向将奇数位(1、3、5等等)相加。
@@ -62,8 +64,9 @@ public class Bank {
         偶数位乘以2（有些要减去9）的结果：1 6 2 6 1 5 7 7，求和=35。
         最后35+35=70 可以被10整除，认定校验通过
         因此
-        倒推方法为bin+随机数（卡号长度-1）正向开始
-        奇数位乘以2偶数位不变
+        倒推方法为bin+随机数（卡号长度-1）逆向开始
+        奇数（因为没有校验位，所有偶数变奇数）位乘以2，判断是否大于9，大于则减9
+        偶数位不变
         求和
         取10的余数
         余数为0则校验位为0，不然则10-余数得校验位
@@ -80,29 +83,37 @@ public class Bank {
         bankNo.append(bin).append(personalNo);
         char[] chars = bankNo.toString().toCharArray();
         int total = 0;
-        for (int i = 0; i < chars.length; i++) {
-            int digits = i+1;
-            int num = Integer.parseInt(String.valueOf(chars[i]));
+        int charsLen = chars.length;
+        for (int i = 0; i < charsLen; i++) {
+            int digits = charsLen - i;//i从0开始，且没有校验位，故起始位置为2
+            int num = chars[i] - '0';
+            //求校验位时少一位数，故计算中奇偶交换计算
             if ((digits&1)==1) {
                 //奇数位乘以2
-                total+=(num*2);
+                int product = num*2;
+                //两位数需要按位相加，结果等于乘积减9
+                total+= product > 9 ? product - 9 : product;
             } else {
                 //偶数位直接相加
                 total+=num;
             }
         }
-        //求校验位
 
+        //求校验位
         int validNum = total%10;
         if (validNum != 0) {
             validNum = 10 - validNum;
         }
         String bankNoStr = bankNo.append(validNum).toString();
-        JSONObject aliValid = aliValid(bankNoStr);
-        if (!aliValid.getBoolean("validated")) {
-            return bankInfo(cardType);
-        }
-        return new BankInfo(bankName, bankNoStr, aliValid.getString("bank"));
+//        JSONObject aliValid = aliValid(bankNoStr);
+//        if (!aliValid.getBoolean("validated")) {
+//            //return bankInfo(cardType);
+//            System.out.println(aliValid);
+//        } else {
+//            System.out.println(bankNoStr);
+//        }
+        //aliValid.getString("bank")
+        return new BankInfo(bankName, bankNoStr, null);
     }
 
 
@@ -128,4 +139,24 @@ public class Bank {
         }
         return JSONObject.parseObject(sb.toString());
     }
+
+    public static int luhn(String str) {
+        char[] chars = str.toCharArray();
+        int sum = 0;
+        int len = chars.length;
+        for (int i = 0; i < len; i++) {
+            int index = (len-i);//当前位数（从右往左顺序）
+            if ((index&1)==1) {
+                //奇数位
+                sum+=chars[i]-'0';
+            } else {
+                //偶数位
+                int even = chars[i]-'0';
+                even*=2;
+                sum += even>9 ? even-9 : even;
+            }
+        }
+        return sum;
+    }
+
 }
