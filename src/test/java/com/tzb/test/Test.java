@@ -1,3 +1,5 @@
+package com.tzb.test;
+
 import com.tzb.faker4j.Faker;
 import com.tzb.faker4j.params.BankInfo;
 import com.tzb.faker4j.params.RefInt;
