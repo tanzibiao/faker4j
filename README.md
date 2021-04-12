@@ -17,7 +17,7 @@ maven使用：
 
 
         
-        //该银行信息可以通过校验，生成时需要联网并能访问阿里的api
+        //该银行信息可以通过校验
         BankInfo bankInfo = Faker.bank().bankInfo();
         //卡号
         bankInfo.getBankNo();
