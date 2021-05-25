@@ -12,13 +12,13 @@ import com.tzb.faker4j.params.RefInt;
  **/
 public class SeqOrderly {
 
-    public static String seqNo(String prefix, RefInt index, int length, String suffix) {
+    public String seqNo(String prefix, RefInt index, int length, String suffix) {
         if (index == null)
             return null;
         return prefix + seqNo(index, length) + suffix;
     }
 
-    public static String seqNo(String prefix, RefInt index, int length) {
+    public String seqNo(String prefix, RefInt index, int length) {
         if (index == null)
             return null;
         return prefix + seqNo(index, length);
@@ -41,7 +41,7 @@ public class SeqOrderly {
      * @Author tanzibiao
      * @Date 2021-03-26 15:22:03
      **/
-    public static String seqNo(RefInt index, int length) {
+    public String seqNo(RefInt index, int length) {
         if (index == null)
             return null;
         //取引用

@@ -17,7 +17,7 @@ public class Word {
      * @param 
      * @return java.lang.String
      **/
-    public static String randomWord() {
+    public String randomWord() {
         int length = 12 + (int) (Math.random() * 9);
         String word = "";
         for (int i = 0; i < length; i++) {
@@ -32,7 +32,7 @@ public class Word {
      * @param length 字母长度
      * @return java.lang.String
      **/
-    public static String randomWord(int length) {
+    public String randomWord(int length) {
         String word = "";
         for (int i = 0; i < length; i++) {
             word += (char) randomChar((int) (Math.random() * 2) == 1);
@@ -48,7 +48,7 @@ public class Word {
      * @param isCapital
      * @return java.lang.String
      **/
-    public static String randomWord(int length, boolean isCapital) {
+    public String randomWord(int length, boolean isCapital) {
         String word = "";
         for (int i = 0; i < length; i++) {
             word += (char) randomChar(isCapital);
@@ -56,15 +56,15 @@ public class Word {
         return word;
     }
 
-    public static String randomCapitalWord() {
+    public String randomCapitalWord() {
         return randomWord(true);
     }
 
-    public static String randomLowerWord() {
+    public String randomLowerWord() {
         return randomWord(false);
     }
 
-    public static String randomWord(boolean isCapital) {
+    public String randomWord(boolean isCapital) {
         int length = 12 + (int) (Math.random() * 9);
         String word = "";
         for (int i = 0; i < length; i++) {
@@ -80,7 +80,7 @@ public class Word {
      * @param flag true大写字母false小写字母
      * @return byte
      **/
-    private static byte randomChar(boolean flag) {
+    private byte randomChar(boolean flag) {
         byte resultBt;
         byte bt = (byte) (Math.random() * 26);// 0 <= bt < 26
         if (flag) {

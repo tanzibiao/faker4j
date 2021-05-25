@@ -44,7 +44,7 @@ public class Personal {
      * @param 
      * @return java.lang.String
      **/
-    public static String name() {
+    public String name() {
         return sex().equals(male) ? maleName() : femaleName();
     }
     /**
@@ -54,7 +54,7 @@ public class Personal {
      * @param 
      * @return java.lang.String
      **/
-    public static String maleName() {
+    public String maleName() {
         String firstName = Faker.random.nextBoolean() ? firstName() : firstDoubleName();
         return firstName + lastMaleName(Faker.random.nextInt(2)+1);
     }
@@ -66,7 +66,7 @@ public class Personal {
      * @param 
      * @return java.lang.String
      **/
-    public static String femaleName() {
+    public String femaleName() {
         String firstName = Faker.random.nextInt(2) == 1 ? firstName() : firstDoubleName();
         return firstName + lastFemaleName(Faker.random.nextInt(2)+1);
     }
@@ -78,7 +78,7 @@ public class Personal {
      * @param length 名长度(长度需大于0)
      * @return java.lang.String
      **/
-    public static String lastMaleName (int length) {
+    public String lastMaleName (int length) {
         return lastName(length, maleName);
     }
 
@@ -89,11 +89,11 @@ public class Personal {
      * @param length
      * @return java.lang.String
      **/
-    public static String lastFemaleName (int length) {
+    public String lastFemaleName (int length) {
         return lastName(length, femaleName);
     }
 
-    private static String lastName (int length, String[] names) {
+    private String lastName (int length, String[] names) {
         if (length < 1) {
             return  null;
         }
@@ -111,7 +111,7 @@ public class Personal {
      * @param 
      * @return java.lang.String
      **/
-    public static String firstName() {
+    public String firstName() {
         return Faker.randomList(firstName);
     }
 
@@ -122,7 +122,7 @@ public class Personal {
      * @param 
      * @return java.lang.String
      **/
-    public static String firstDoubleName() {
+    public String firstDoubleName() {
         return Faker.randomList(firstDoubleName);
     }
 
@@ -133,7 +133,7 @@ public class Personal {
      * @param 
      * @return java.lang.String
      **/
-    public static String sex() {
+    public String sex() {
         return Faker.randomList(sex);
     }
 
@@ -144,7 +144,7 @@ public class Personal {
      * @param
      * @return java.lang.String
      **/
-    public static String idNo() {
+    public String idNo() {
         return idNo(sex());
     }
 
@@ -155,7 +155,7 @@ public class Personal {
      * @param sex
      * @return java.lang.String
      **/
-    public static String idNo(String sex){
+    public String idNo(String sex){
         //随机生成生日 1~99岁
         long begin = System.currentTimeMillis() - 3153600000000L;//100年内
         long end = System.currentTimeMillis() - 31536000000L; //1年内
@@ -174,7 +174,7 @@ public class Personal {
      * @param sex 性别（男：male,女：female）
      * @return java.lang.String
      **/
-    public static String idNo(String birth,String sex){
+    public String idNo(String birth,String sex){
         StringBuilder sb = new StringBuilder();
         int value = Faker.random.nextInt(cities.length);
         sb.append(cities[value]);
@@ -228,7 +228,7 @@ public class Personal {
      * @param
      * @return com.tzb.faker4j.params.PersonalInfo
      **/
-    public static PersonalInfo personalInfo() {
+    public PersonalInfo personalInfo() {
         String sex = sex();
         return new PersonalInfo(maleName(), idNo(sex), sex);
     }
@@ -240,7 +240,7 @@ public class Personal {
      * @param 
      * @return com.tzb.faker4j.params.PersonalInfo
      **/
-    public static PersonalInfo maleInfo() {
+    public PersonalInfo maleInfo() {
         return new PersonalInfo(maleName(), idNo(male), male);
     }
 
@@ -251,7 +251,7 @@ public class Personal {
      * @param 
      * @return com.tzb.faker4j.params.PersonalInfo
      **/
-    public static PersonalInfo femaleInfo() {
+    public PersonalInfo femaleInfo() {
         return new PersonalInfo(femaleName(), idNo(female), female);
     }
 }

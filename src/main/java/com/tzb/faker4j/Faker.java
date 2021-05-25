@@ -23,9 +23,7 @@ public class Faker {
      * @param 
      * @return com.tzb.faker4j.orderly.SeqOrderly
      **/
-    public static SeqOrderly seqOrderly() {
-        return new SeqOrderly();
-    }
+    public static final SeqOrderly seqOrderly = new SeqOrderly();
 
     /**
      * 文件路径、后缀信息
@@ -34,25 +32,22 @@ public class Faker {
      * @param 
      * @return com.tzb.faker4j.random.File
      **/
-    public static File randomFileInfo() {
-        return new File();
-    }
+    public static final File file= new File();
 
-    public static Word word() {
-        return new Word();
-    }
+    public static final Word word = new Word();
+    
 
-    public static Addr addr() {return new Addr();}
+    public static final Addr addr  = new Addr();
 
-    public static Num num() {return new Num();}
+    public static final Num num  = new Num();
 
-    public static Personal personal() {return new Personal();}
+    public static final Personal personal  = new Personal();
 
-    public static Tel tel() {return new Tel();}
+    public static final Tel tel  = new Tel();
 
-    public static Car car() {return new Car();}
+    public static final Car car  = new Car();
 
-    public static Bank bank() {return new Bank();}
+    public static final Bank bank  = new Bank();
 
 
     /**
@@ -64,7 +59,7 @@ public class Faker {
      * @Author tanzibiao
      * @Date 2021-03-26 15:03:15
      **/
-    public static <T> T randomList(T[] arr) {
+    public static final <T> T randomList(T[] arr) {
         if (arr == null || arr.length < 1) {
             return null;
         }

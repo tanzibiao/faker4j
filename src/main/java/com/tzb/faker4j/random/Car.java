@@ -46,7 +46,7 @@ public class Car {
      * 随机生成车牌号
      * @return
      */
-    public static String carNo() {
+    public String carNo() {
         int count = 0;
         String sb = "";
         // 随机获取后五位随机序号

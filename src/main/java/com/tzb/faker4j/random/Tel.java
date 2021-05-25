@@ -13,7 +13,7 @@ import com.tzb.faker4j.Faker;
 public class Tel {
     private static Integer[] telFirst = new Integer[]{134,135,136,137,138,139,150,151,152,157,158,159,130,131,132,155,156,133,153,187,188,189};
 
-    public static String phone() {
-        return Faker.randomList(telFirst) + Num.num(8);
+    public String phone() {
+        return Faker.randomList(telFirst) + Faker.num.num(8);
     }
 }

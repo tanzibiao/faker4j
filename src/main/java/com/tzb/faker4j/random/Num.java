@@ -22,7 +22,7 @@ public class Num {
      * @param end 结束数
      * @return int
      **/
-    public static int num(int start,int end) {
+    public int num(int start,int end) {
         return (int)(Math.random()*(end-start+1)+start);
     }
 
@@ -33,7 +33,7 @@ public class Num {
      * @param length
      * @return java.lang.String
      **/
-    public static String num(int length) {
+    public String num(int length) {
         if (length < 1) {
             return null;
         }
@@ -51,7 +51,7 @@ public class Num {
      * @param 
      * @return java.math.BigDecimal
      **/
-    public static BigDecimal amount() {
+    public BigDecimal amount() {
         return amount(4,2);
     }
 
@@ -63,7 +63,7 @@ public class Num {
      * @param s 小数位长度
      * @return java.math.BigDecimal
      **/
-    public static BigDecimal amount(int l,int s) {
+    public BigDecimal amount(int l,int s) {
         StringBuffer buffer = new StringBuffer();
         buffer.append(num(l)).append(".").append(num(s));
         return new BigDecimal(buffer.toString()).setScale(s);

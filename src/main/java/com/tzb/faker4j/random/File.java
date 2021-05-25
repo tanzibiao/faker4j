@@ -24,7 +24,7 @@ public class File {
      * @param deep 路径深度
      * @return java.lang.String
      **/
-    public static String path(int deep) {
+    public String path(int deep) {
         StringBuffer str = new StringBuffer();
         str.append("/");
         for (int i = 0; i < deep; i++) {
@@ -33,7 +33,7 @@ public class File {
         return str.toString();
     }
 
-    public static String pathAndSuffx(int deep) {
+    public String pathAndSuffx(int deep) {
         StringBuffer str = new StringBuffer();
         str.append("/");
         for (int i = 0; i < deep; i++) {
@@ -43,7 +43,7 @@ public class File {
         return str.toString();
     }
 
-    public static String ranWordPath(int deep) {
+    public String ranWordPath(int deep) {
         StringBuffer str = new StringBuffer();
         str.append("/");
         for (int i = 0; i < deep; i++) {
