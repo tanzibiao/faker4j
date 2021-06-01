@@ -47,7 +47,7 @@ public class File {
         StringBuffer str = new StringBuffer();
         str.append("/");
         for (int i = 0; i < deep; i++) {
-            str.append(Word.randomWord()).append("/");
+            str.append(Faker.word.randomWord()).append("/");
         }
         return str.toString();
     }

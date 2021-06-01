@@ -70,7 +70,7 @@ public class Bank {
             len = 19;
         }
         //随机个人识别码
-        String personalNo = Num.num(len - bin.length() - 1);
+        String personalNo = Faker.num.num(len - bin.length() - 1);
         StringBuffer bankNo = new StringBuffer();
         bankNo.append(bin).append(personalNo);
         char[] chars = bankNo.toString().toCharArray();

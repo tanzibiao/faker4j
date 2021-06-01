@@ -16,8 +16,8 @@ public class Addr {
     public String addr() {
         StringBuffer buffer = new StringBuffer();
         buffer.append(Faker.randomList(road));
-        buffer.append(Num.num(4)).append("号");
-        buffer.append(Num.num(4)).append("-").append(Num.num(3));
+        buffer.append(Faker.num.num(4)).append("号");
+        buffer.append(Faker.num.num(4)).append("-").append(Faker.num.num(3));
         return buffer.toString();
     }
 
