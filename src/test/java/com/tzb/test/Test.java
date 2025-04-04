@@ -1,6 +1,7 @@
 package com.tzb.test;
 
 import com.tzb.faker4j.Faker;
+import com.tzb.faker4j.company.CompanyDataGenerator;
 import com.tzb.faker4j.params.BankInfo;
 import com.tzb.faker4j.params.RefInt;
 import com.tzb.faker4j.random.Word;
@@ -42,6 +43,10 @@ public class Test {
         bankInfo.getBankName();
         System.out.println(Faker.bank.bankInfo().getBankNo());
         System.out.println(Faker.word.randomWord());
+
+        CompanyDataGenerator.Company company = Faker.company;
+        System.out.println(company.name);
+        System.out.println(company.creditCode);
 
     }
 }

@@ -1,5 +1,6 @@
 package com.tzb.faker4j;
 
+import com.tzb.faker4j.company.CompanyDataGenerator;
 import com.tzb.faker4j.orderly.SeqOrderly;
 import com.tzb.faker4j.random.*;
 
@@ -48,6 +49,8 @@ public class Faker {
     public static final Car car  = new Car();
 
     public static final Bank bank  = new Bank();
+
+    public static final CompanyDataGenerator.Company company  = CompanyDataGenerator.generateCompany();
 
 
     /**
