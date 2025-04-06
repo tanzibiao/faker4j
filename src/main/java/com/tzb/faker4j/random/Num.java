@@ -9,31 +9,31 @@ import java.math.BigDecimal;
  * <p>
  * <b>详细描述：</b>
  *
- * @Author tanzibiao
- * @Date 2021-04-08 16:14:58
+ * author tanzibiao
+ * date 2021-04-08 16:14:58
  **/
 public class Num {
     private static final Integer[] singleNum = new Integer[] {0,1,2,3,4,5,6,7,8,9};
     /**
      * 数
-     * @Author tanzibiao
-     * @Date 2021-04-08 16:15:34
+     * author tanzibiao
+     * date 2021-04-08 16:15:34
      * @param start 开始数
      * @param end 结束数
      * @return int
      **/
-    public static int num(int start,int end) {
+    public int num(int start,int end) {
         return (int)(Math.random()*(end-start+1)+start);
     }
 
     /**
      * 获取对应长度的数字（返回{@link String}可获取到0000）
-     * @Author tanzibiao
-     * @Date 2021-04-08 16:24:36
-     * @param length
+     * author tanzibiao
+     * date 2021-04-08 16:24:36
+     * @param length 长度
      * @return java.lang.String
      **/
-    public static String num(int length) {
+    public String num(int length) {
         if (length < 1) {
             return null;
         }
@@ -46,24 +46,23 @@ public class Num {
 
     /**
      * 4位数，两位小数的金额
-     * @Author tanzibiao
-     * @Date 2021-04-08 16:32:47
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 16:32:47
      * @return java.math.BigDecimal
      **/
-    public static BigDecimal amount() {
+    public BigDecimal amount() {
         return amount(4,2);
     }
 
     /**
      * 金额
-     * @Author tanzibiao
-     * @Date 2021-04-08 16:32:55
+     * author tanzibiao
+     * date 2021-04-08 16:32:55
      * @param l 长度
      * @param s 小数位长度
      * @return java.math.BigDecimal
      **/
-    public static BigDecimal amount(int l,int s) {
+    public BigDecimal amount(int l,int s) {
         StringBuffer buffer = new StringBuffer();
         buffer.append(num(l)).append(".").append(num(s));
         return new BigDecimal(buffer.toString()).setScale(s);

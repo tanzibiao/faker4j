@@ -5,19 +5,18 @@ package com.tzb.faker4j.random;
  * <p>
  * <b>详细描述：生成随机英文字母</b>
  *
- * @Author tanzibiao
- * @Date 2021-04-08 10:47:53
+ * author tanzibiao
+ * date 2021-04-08 10:47:53
  **/
 public class Word {
 
     /**
      * 大小写，长度随机
-     * @Author tanzibiao
-     * @Date 2021-04-08 11:20:29
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 11:20:29
      * @return java.lang.String
      **/
-    public static String randomWord() {
+    public String randomWord() {
         int length = 12 + (int) (Math.random() * 9);
         String word = "";
         for (int i = 0; i < length; i++) {
@@ -27,12 +26,12 @@ public class Word {
     }
     /**
      * 固定长度的随机字母
-     * @Author tanzibiao
-     * @Date 2021-04-08 11:09:29
+     * author tanzibiao
+     * date 2021-04-08 11:09:29
      * @param length 字母长度
      * @return java.lang.String
      **/
-    public static String randomWord(int length) {
+    public String randomWord(int length) {
         String word = "";
         for (int i = 0; i < length; i++) {
             word += (char) randomChar((int) (Math.random() * 2) == 1);
@@ -42,13 +41,13 @@ public class Word {
 
     /**
      * 自定义长度，大小写
-     * @Author tanzibiao
-     * @Date 2021-04-08 11:15:27
-     * @param length
-     * @param isCapital
+     * author tanzibiao
+     * date 2021-04-08 11:15:27
+     * @param length 字母长度
+     * @param isCapital true大写字母false小写字母
      * @return java.lang.String
      **/
-    public static String randomWord(int length, boolean isCapital) {
+    public String randomWord(int length, boolean isCapital) {
         String word = "";
         for (int i = 0; i < length; i++) {
             word += (char) randomChar(isCapital);
@@ -56,15 +55,15 @@ public class Word {
         return word;
     }
 
-    public static String randomCapitalWord() {
+    public String randomCapitalWord() {
         return randomWord(true);
     }
 
-    public static String randomLowerWord() {
+    public String randomLowerWord() {
         return randomWord(false);
     }
 
-    public static String randomWord(boolean isCapital) {
+    public String randomWord(boolean isCapital) {
         int length = 12 + (int) (Math.random() * 9);
         String word = "";
         for (int i = 0; i < length; i++) {
@@ -75,12 +74,12 @@ public class Word {
 
     /**
      *
-     * @Author tanzibiao
-     * @Date 2021-04-08 11:13:24
+     * author tanzibiao
+     * date 2021-04-08 11:13:24
      * @param flag true大写字母false小写字母
      * @return byte
      **/
-    private static byte randomChar(boolean flag) {
+    private byte randomChar(boolean flag) {
         byte resultBt;
         byte bt = (byte) (Math.random() * 26);// 0 <= bt < 26
         if (flag) {

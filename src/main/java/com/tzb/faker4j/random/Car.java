@@ -7,8 +7,8 @@ import com.tzb.faker4j.Faker;
  * <p>
  * <b>详细描述：车牌号</b>
  *
- * @Author tanzibiao
- * @Date 2021-04-08 16:44:39
+ * author tanzibiao
+ * date 2021-04-08 16:44:39
  **/
 public class Car {
 
@@ -44,9 +44,8 @@ public class Car {
 
     /**
      * 随机生成车牌号
-     * @return
      */
-    public static String carNo() {
+    public String carNo() {
         int count = 0;
         String sb = "";
         // 随机获取后五位随机序号

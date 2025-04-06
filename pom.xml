@@ -6,7 +6,7 @@
 
     <groupId>io.github.tanzibiao</groupId>
     <artifactId>faker4j</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <name>faker4j</name>
     <description>
         java测试数据构建库
@@ -32,7 +32,7 @@
         <developer>
             <id>tanzibiao</id>
             <name>Tan Zi Biao</name>
-            <email>tanzibiaoinc@gmail.com</email>
+            <email>tanzibiaoinc@qq.com</email>
         </developer>
     </developers>
     <build>

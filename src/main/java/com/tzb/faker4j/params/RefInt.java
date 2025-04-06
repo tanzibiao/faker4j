@@ -5,8 +5,8 @@ package com.tzb.faker4j.params;
  * <p>
  * <b>详细描述：将特殊基础类包装，达到传递引用的目的</b>
  *
- * @Author tanzibiao
- * @Date 2021-03-26 18:54:44
+ * author tanzibiao
+ * date 2021-03-26 18:54:44
  **/
 public class RefInt {
     private Integer number;

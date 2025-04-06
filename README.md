@@ -18,7 +18,7 @@ maven使用：
 
         
         //该银行信息可以通过校验
-        BankInfo bankInfo = Faker.bank().bankInfo();
+        BankInfo bankInfo = Faker.bank.bankInfo();
         //卡号
         bankInfo.getBankNo();
         //银行编码

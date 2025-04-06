@@ -11,8 +11,8 @@ import java.util.Date;
  * <p>
  * <b>详细描述：个人信息</b>
  *
- * @Author tanzibiao
- * @Date 2021-04-08 14:11:55
+ * author tanzibiao
+ * date 2021-04-08 14:11:55
  **/
 public class Personal {
 
@@ -39,61 +39,58 @@ public class Personal {
 
     /**
      * 随机姓名
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:33:00
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 15:33:00
      * @return java.lang.String
      **/
-    public static String name() {
+    public String name() {
         return sex().equals(male) ? maleName() : femaleName();
     }
     /**
      * 男姓名
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:25:08
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 15:25:08
      * @return java.lang.String
      **/
-    public static String maleName() {
+    public String maleName() {
         String firstName = Faker.random.nextBoolean() ? firstName() : firstDoubleName();
         return firstName + lastMaleName(Faker.random.nextInt(2)+1);
     }
 
     /**
      * 女姓名
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:32:10
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 15:32:10
      * @return java.lang.String
      **/
-    public static String femaleName() {
+    public String femaleName() {
         String firstName = Faker.random.nextInt(2) == 1 ? firstName() : firstDoubleName();
         return firstName + lastFemaleName(Faker.random.nextInt(2)+1);
     }
 
     /**
      * 男名
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:24:45
+     * author tanzibiao
+     * date 2021-04-08 15:24:45
      * @param length 名长度(长度需大于0)
      * @return java.lang.String
      **/
-    public static String lastMaleName (int length) {
+    public String lastMaleName (int length) {
         return lastName(length, maleName);
     }
 
     /**
      * 女名
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:31:09
-     * @param length
+     * author tanzibiao
+     * date 2021-04-08 15:31:09
+     * @param length 名长度(长度需大于0)
      * @return java.lang.String
      **/
-    public static String lastFemaleName (int length) {
+    public String lastFemaleName (int length) {
         return lastName(length, femaleName);
     }
 
-    private static String lastName (int length, String[] names) {
+    private String lastName (int length, String[] names) {
         if (length < 1) {
             return  null;
         }
@@ -106,56 +103,52 @@ public class Personal {
 
     /**
      * 姓
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:33:20
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 15:33:20
      * @return java.lang.String
      **/
-    public static String firstName() {
+    public String firstName() {
         return Faker.randomList(firstName);
     }
 
     /**
      * 复姓
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:33:27
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 15:33:27
      * @return java.lang.String
      **/
-    public static String firstDoubleName() {
+    public String firstDoubleName() {
         return Faker.randomList(firstDoubleName);
     }
 
     /**
      * 性别
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:33:35
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 15:33:35
      * @return java.lang.String
      **/
-    public static String sex() {
+    public String sex() {
         return Faker.randomList(sex);
     }
 
     /**
      * 随机性别身份证号码
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:59:36
-     * @param
+     * author tanzibiao
+     * date 2021-04-08 15:59:36
      * @return java.lang.String
      **/
-    public static String idNo() {
+    public String idNo() {
         return idNo(sex());
     }
 
     /**
      * 身份证号码
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:57:18
-     * @param sex
+     * author tanzibiao
+     * date 2021-04-08 15:57:18
+     * @param sex 性别
      * @return java.lang.String
      **/
-    public static String idNo(String sex){
+    public String idNo(String sex){
         //随机生成生日 1~99岁
         long begin = System.currentTimeMillis() - 3153600000000L;//100年内
         long end = System.currentTimeMillis() - 31536000000L; //1年内
@@ -168,13 +161,13 @@ public class Personal {
 
     /**
      * 身份证号
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:57:09
+     * author tanzibiao
+     * date 2021-04-08 15:57:09
      * @param birth 生日yyyyMMdd
      * @param sex 性别（男：male,女：female）
      * @return java.lang.String
      **/
-    public static String idNo(String birth,String sex){
+    public String idNo(String birth,String sex){
         StringBuilder sb = new StringBuilder();
         int value = Faker.random.nextInt(cities.length);
         sb.append(cities[value]);
@@ -223,35 +216,32 @@ public class Personal {
 
     /**
      * 随机个人信息
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:55:59
-     * @param
+     * author tanzibiao
+     * date 2021-04-08 15:55:59
      * @return com.tzb.faker4j.params.PersonalInfo
      **/
-    public static PersonalInfo personalInfo() {
+    public PersonalInfo personalInfo() {
         String sex = sex();
         return new PersonalInfo(maleName(), idNo(sex), sex);
     }
     
     /**
      * 男性信息
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:56:23
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 15:56:23
      * @return com.tzb.faker4j.params.PersonalInfo
      **/
-    public static PersonalInfo maleInfo() {
+    public PersonalInfo maleInfo() {
         return new PersonalInfo(maleName(), idNo(male), male);
     }
 
     /**
      * 女性信息
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:56:32
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 15:56:32
      * @return com.tzb.faker4j.params.PersonalInfo
      **/
-    public static PersonalInfo femaleInfo() {
+    public PersonalInfo femaleInfo() {
         return new PersonalInfo(femaleName(), idNo(female), female);
     }
 }

@@ -7,8 +7,8 @@ import com.tzb.faker4j.Faker;
  * <p>
  * <b>详细描述：随机生成文件名、路径</b>
  *
- * @Author tanzibiao
- * @Date 2021-04-08 10:47:01
+ * author tanzibiao
+ * date 2021-04-08 10:47:01
  **/
 public class File {
 
@@ -19,12 +19,12 @@ public class File {
     private static final String[] words = new String[]{"alias","root","logs","pictures","photos","consequatur","aut","perferendis","sit","voluptatem","accusantium","doloremque","aperiam","eaque","ipsa","quae","ab","illo","inventore","veritatis","et","quasi","architecto","beatae","vitae","dicta","sunt","explicabo","aspernatur","aut","odit","aut","fugit","sed","quia","consequuntur","magni","dolores","eos","qui","ratione","voluptatem","sequi","nesciunt","neque","dolorem","ipsum","quia","dolor","sit","amet","consectetur","adipisci","velit","sed","quia","non","numquam","eius","modi","tempora","incidunt","ut","labore","et","dolore","magnam","aliquam","quaerat","voluptatem","ut","enim","ad","minima","veniam","quis","nostrum","exercitationem","ullam","corporis","nemo","enim","ipsam","voluptatem","quia","voluptas","sit","suscipit","laboriosam","nisi","ut","aliquid","ex","ea","commodi","consequatur","quis","autem","vel","eum","iure","reprehenderit","qui","in","ea","voluptate","velit","esse","quam","nihil","molestiae","et","iusto","odio","dignissimos","ducimus","qui","blanditiis","praesentium","laudantium","totam","rem","voluptatum","deleniti","atque","corrupti","quos","dolores","et","quas","molestias","excepturi","sint","occaecati","cupiditate","non","provident","sed","ut","perspiciatis","unde","omnis","iste","natus","error","similique","sunt","in","culpa","qui","officia","deserunt","mollitia","animi","id","est","laborum","et","dolorum","fuga","et","harum","quidem","rerum","facilis","est","et","expedita","distinctio","nam","libero","tempore","cum","soluta","nobis","est","eligendi","optio","cumque","nihil","impedit","quo","porro","quisquam","est","qui","minus","id","quod","maxime","placeat","facere","possimus","omnis","voluptas","assumenda","est","omnis","dolor","repellendus","temporibus","autem","quibusdam","et","aut","consequatur","vel","illum","qui","dolorem","eum","fugiat","quo","voluptas","nulla","pariatur","at","vero","eos","et","accusamus","officiis","debitis","aut","rerum","necessitatibus","saepe","eveniet","ut","et","voluptates","repudiandae","sint","et","molestiae","non","recusandae","itaque","earum","rerum","hic","tenetur","a","sapiente","delectus","ut","aut","reiciendis","voluptatibus","maiores","doloribus","asperiores","repellat"};
     /**
      * 获取路径
-     * @Author tanzibiao
-     * @Date 2021-04-08 10:51:50
+     * author tanzibiao
+     * date 2021-04-08 10:51:50
      * @param deep 路径深度
      * @return java.lang.String
      **/
-    public static String path(int deep) {
+    public String path(int deep) {
         StringBuffer str = new StringBuffer();
         str.append("/");
         for (int i = 0; i < deep; i++) {
@@ -33,7 +33,7 @@ public class File {
         return str.toString();
     }
 
-    public static String pathAndSuffx(int deep) {
+    public String pathAndSuffx(int deep) {
         StringBuffer str = new StringBuffer();
         str.append("/");
         for (int i = 0; i < deep; i++) {
@@ -43,11 +43,11 @@ public class File {
         return str.toString();
     }
 
-    public static String ranWordPath(int deep) {
+    public String ranWordPath(int deep) {
         StringBuffer str = new StringBuffer();
         str.append("/");
         for (int i = 0; i < deep; i++) {
-            str.append(Word.randomWord()).append("/");
+            str.append(Faker.word.randomWord()).append("/");
         }
         return str.toString();
     }

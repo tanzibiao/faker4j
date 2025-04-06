@@ -5,8 +5,8 @@ package com.tzb.faker4j.params;
  * <p>
  * <b>详细描述：使用类，是因为性别，姓名，身份证号码可以对应</b>
  *
- * @Author tanzibiao
- * @Date 2021-04-08 14:08:44
+ * author tanzibiao
+ * date 2021-04-08 14:08:44
  **/
 public class PersonalInfo {
 

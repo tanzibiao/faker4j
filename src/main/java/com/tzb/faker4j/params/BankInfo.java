@@ -5,8 +5,8 @@ package com.tzb.faker4j.params;
  * <p>
  * <b>详细描述：</b>
  *
- * @Author tanzibiao
- * @Date 2021-04-08 17:14:16
+ * author tanzibiao
+ * date 2021-04-08 17:14:16
  **/
 public class BankInfo {
 
