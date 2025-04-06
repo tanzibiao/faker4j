@@ -11,8 +11,8 @@ import java.util.Date;
  * <p>
  * <b>详细描述：个人信息</b>
  *
- * @Author tanzibiao
- * @Date 2021-04-08 14:11:55
+ * author tanzibiao
+ * date 2021-04-08 14:11:55
  **/
 public class Personal {
 
@@ -39,9 +39,8 @@ public class Personal {
 
     /**
      * 随机姓名
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:33:00
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 15:33:00
      * @return java.lang.String
      **/
     public String name() {
@@ -49,9 +48,8 @@ public class Personal {
     }
     /**
      * 男姓名
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:25:08
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 15:25:08
      * @return java.lang.String
      **/
     public String maleName() {
@@ -61,9 +59,8 @@ public class Personal {
 
     /**
      * 女姓名
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:32:10
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 15:32:10
      * @return java.lang.String
      **/
     public String femaleName() {
@@ -73,8 +70,8 @@ public class Personal {
 
     /**
      * 男名
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:24:45
+     * author tanzibiao
+     * date 2021-04-08 15:24:45
      * @param length 名长度(长度需大于0)
      * @return java.lang.String
      **/
@@ -84,9 +81,9 @@ public class Personal {
 
     /**
      * 女名
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:31:09
-     * @param length
+     * author tanzibiao
+     * date 2021-04-08 15:31:09
+     * @param length 名长度(长度需大于0)
      * @return java.lang.String
      **/
     public String lastFemaleName (int length) {
@@ -106,9 +103,8 @@ public class Personal {
 
     /**
      * 姓
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:33:20
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 15:33:20
      * @return java.lang.String
      **/
     public String firstName() {
@@ -117,9 +113,8 @@ public class Personal {
 
     /**
      * 复姓
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:33:27
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 15:33:27
      * @return java.lang.String
      **/
     public String firstDoubleName() {
@@ -128,9 +123,8 @@ public class Personal {
 
     /**
      * 性别
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:33:35
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 15:33:35
      * @return java.lang.String
      **/
     public String sex() {
@@ -139,9 +133,8 @@ public class Personal {
 
     /**
      * 随机性别身份证号码
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:59:36
-     * @param
+     * author tanzibiao
+     * date 2021-04-08 15:59:36
      * @return java.lang.String
      **/
     public String idNo() {
@@ -150,9 +143,9 @@ public class Personal {
 
     /**
      * 身份证号码
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:57:18
-     * @param sex
+     * author tanzibiao
+     * date 2021-04-08 15:57:18
+     * @param sex 性别
      * @return java.lang.String
      **/
     public String idNo(String sex){
@@ -168,8 +161,8 @@ public class Personal {
 
     /**
      * 身份证号
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:57:09
+     * author tanzibiao
+     * date 2021-04-08 15:57:09
      * @param birth 生日yyyyMMdd
      * @param sex 性别（男：male,女：female）
      * @return java.lang.String
@@ -223,9 +216,8 @@ public class Personal {
 
     /**
      * 随机个人信息
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:55:59
-     * @param
+     * author tanzibiao
+     * date 2021-04-08 15:55:59
      * @return com.tzb.faker4j.params.PersonalInfo
      **/
     public PersonalInfo personalInfo() {
@@ -235,9 +227,8 @@ public class Personal {
     
     /**
      * 男性信息
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:56:23
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 15:56:23
      * @return com.tzb.faker4j.params.PersonalInfo
      **/
     public PersonalInfo maleInfo() {
@@ -246,9 +237,8 @@ public class Personal {
 
     /**
      * 女性信息
-     * @Author tanzibiao
-     * @Date 2021-04-08 15:56:32
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 15:56:32
      * @return com.tzb.faker4j.params.PersonalInfo
      **/
     public PersonalInfo femaleInfo() {

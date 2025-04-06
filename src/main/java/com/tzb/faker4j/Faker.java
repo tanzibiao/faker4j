@@ -11,28 +11,17 @@ import java.util.Random;
  * <p>
  * <b>详细描述：</b>
  *
- * @Author tanzibiao
- * @Date 2021-03-26 14:38:51
+ * author tanzibiao
+ * date 2021-03-26 14:38:51
  **/
 public class Faker {
     public static final Random random = new Random();
 
     /**
      * 获取有序序列号
-     * @Author tanzibiao
-     * @Date 2021-04-08 10:44:27
-     * @param 
-     * @return com.tzb.faker4j.orderly.SeqOrderly
      **/
     public static final SeqOrderly seqOrderly = new SeqOrderly();
 
-    /**
-     * 文件路径、后缀信息
-     * @Author tanzibiao
-     * @Date 2021-04-09 14:46:09
-     * @param 
-     * @return com.tzb.faker4j.random.File
-     **/
     public static final File file= new File();
 
     public static final Word word = new Word();
@@ -56,12 +45,13 @@ public class Faker {
     /**
      * 随机返回数组中的元素
      *
+     * @param <T> 数组元素的类型
      * @param arr 随机集合
-     * @return T
-     * <br/>如["上面","下面","中"]随机返回一个
-     * @Author tanzibiao
-     * @Date 2021-03-26 15:03:15
-     **/
+     * @return 随机集合中的元素
+     * 如["上面","下面","中"]随机返回一个
+     * author tanzibiao
+     * date 2021-03-26 15:03:15
+     */
     public static final <T> T randomList(T[] arr) {
         if (arr == null || arr.length < 1) {
             return null;

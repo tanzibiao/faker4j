@@ -7,12 +7,12 @@ import com.tzb.faker4j.params.BankInfo;
 /**
  * <b>类说明：银行卡</b>
  * <p>
- * <b>详细描述：生成可通过校验的卡号</b><br/>
- * <b>该功能需要连接公网</b><br/>
+ * <b>详细描述：生成可通过校验的卡号</b>
+ * <b>该功能需要连接公网</b>
  * <b>{@link BankCardType} 查看卡号类型</b>
  *
- * @Author tanzibiao
- * @Date 2021-04-08 17:13:59
+ * author tanzibiao
+ * date 2021-04-08 17:13:59
  **/
 public class Bank {
 
@@ -32,8 +32,8 @@ public class Bank {
     }
     /**
      * 卡号和卡行成对存在，故返回对象
-     * @Author tanzibiao
-     * @Date 2021-04-09 12:06:53
+     * author tanzibiao
+     * date 2021-04-09 12:06:53
      * @param cardType {@link BankCardType}
      * @return com.tzb.faker4j.params.BankInfo
      **/

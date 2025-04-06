@@ -11,8 +11,8 @@ import com.tzb.faker4j.random.Word;
  * <p>
  * <b>详细描述：</b>
  *
- * @Author tanzibiao
- * @Date 2021-03-26 15:04:31
+ * author tanzibiao
+ * date 2021-03-26 15:04:31
  **/
 public class Test {
     public static void main(String[] args) {

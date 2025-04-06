@@ -5,16 +5,15 @@ package com.tzb.faker4j.random;
  * <p>
  * <b>详细描述：生成随机英文字母</b>
  *
- * @Author tanzibiao
- * @Date 2021-04-08 10:47:53
+ * author tanzibiao
+ * date 2021-04-08 10:47:53
  **/
 public class Word {
 
     /**
      * 大小写，长度随机
-     * @Author tanzibiao
-     * @Date 2021-04-08 11:20:29
-     * @param 
+     * author tanzibiao
+     * date 2021-04-08 11:20:29
      * @return java.lang.String
      **/
     public String randomWord() {
@@ -27,8 +26,8 @@ public class Word {
     }
     /**
      * 固定长度的随机字母
-     * @Author tanzibiao
-     * @Date 2021-04-08 11:09:29
+     * author tanzibiao
+     * date 2021-04-08 11:09:29
      * @param length 字母长度
      * @return java.lang.String
      **/
@@ -42,10 +41,10 @@ public class Word {
 
     /**
      * 自定义长度，大小写
-     * @Author tanzibiao
-     * @Date 2021-04-08 11:15:27
-     * @param length
-     * @param isCapital
+     * author tanzibiao
+     * date 2021-04-08 11:15:27
+     * @param length 字母长度
+     * @param isCapital true大写字母false小写字母
      * @return java.lang.String
      **/
     public String randomWord(int length, boolean isCapital) {
@@ -75,8 +74,8 @@ public class Word {
 
     /**
      *
-     * @Author tanzibiao
-     * @Date 2021-04-08 11:13:24
+     * author tanzibiao
+     * date 2021-04-08 11:13:24
      * @param flag true大写字母false小写字母
      * @return byte
      **/

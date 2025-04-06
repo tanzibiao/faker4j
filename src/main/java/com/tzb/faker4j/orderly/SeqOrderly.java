@@ -7,8 +7,8 @@ import com.tzb.faker4j.params.RefInt;
  * <p>
  * <b>详细描述：通过传入引用，返回有序的序列号</b>
  *
- * @Author tanzibiao
- * @Date 2021-04-08 10:39:45
+ * author tanzibiao
+ * date 2021-04-08 10:39:45
  **/
 public class SeqOrderly {
 
@@ -30,16 +30,16 @@ public class SeqOrderly {
      * @param index  开始数字Integer的引用
      * @param length 序列号长度
      * @return java.lang.String
-     * <br/>
+     * 
      * Integer index = 0;
-     * <br/>
+     * 
      * seqNo(index, 4);
-     * <br/>
+     * 
      * 返回
      * 00001
      * 第二次调用返回0002
-     * @Author tanzibiao
-     * @Date 2021-03-26 15:22:03
+     * author tanzibiao
+     * date 2021-03-26 15:22:03
      **/
     public String seqNo(RefInt index, int length) {
         if (index == null)
